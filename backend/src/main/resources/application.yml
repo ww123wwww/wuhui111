@@ -1,0 +1,30 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+
+spring:
+  application:
+    name: campus-booking-demo
+  datasource:
+
+    url: "jdbc:mysql://127.0.0.1:3306/campus_booking_demo?sslMode=DISABLED&allowPublicKeyRetrieval=true&connectionTimeZone=Asia/Shanghai"
+    username: ${DB_USERNAME:campus_demo}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+
+sa-token:
+  token-name: campus-token
+  timeout: 7200
+  is-read-header: true
+  is-read-cookie: false
+  is-read-body: false
+  is-log: false
+  token-style: random-64
+
+demo:
+  # 仅首次空库初始化；不覆盖已有用户和活动。
+  seed: true

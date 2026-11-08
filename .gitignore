@@ -1,0 +1,24 @@
+# 后端编译文件
+**/target/
+*.class
+*.log
+
+# 前端依赖与构建结果
+**/node_modules/
+**/dist/
+**/.vite/
+
+# 编辑器配置
+.idea/
+*.iml
+.vscode/
+
+# 私密配置
+.env
+.env.*
+!.env.example
+**/application-local.yml
+
+# 临时文件
+~$*
+Thumbs.db
